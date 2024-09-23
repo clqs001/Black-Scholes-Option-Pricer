@@ -39,9 +39,8 @@ S_min = st.sidebar.number_input(label = "Min Spot Price", min_value = 0.00, max_
 S_max = st.sidebar.number_input(label = "Max Spot Price", min_value = 0.00, max_value = None, value = 1.5 * S0, step = 0.01)
 
 st.sidebar.subheader('Volatility')
-vol_min, vol_max = st.sidebar.slider(label = "Range of Volatility (%)", min_value = 0.00, max_value = 100.00, value = (0.00, 100.00), step = 0.01, format = '%0.2f%%')
-vol_min /= 100
-vol_max /= 100
+vol_min = st.sidebar.number_input(label = "Min Volatility (%)", min_value = 0.00, max_value = None, value = 50 * sigma, step = 0.01) / 100
+vol_max = st.sidebar.number_input(label = "Max Volatility (%)", min_value = 0.00, max_value = None, value = 150 * sigma, step = 0.01) / 100
 
 st.sidebar.divider()
 
