@@ -17,9 +17,10 @@ st.set_page_config(
 
 # sidebar design
 st.title('Black-Scholes Option Pricer')
-st.sidebar.markdown('**Author:**')
+st.sidebar.title('Black-Scholes Option Pricer')
+st.sidebar.markdown(':grey[Author:]')
 linkedin_logo = 'https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg'
-st.sidebar.markdown(f'<img src={linkedin_logo} width="26" heigh="26">[**Qing Shang**](www.linkedin.com/in/qing-shang-columbia)',
+st.sidebar.markdown(f'<img src={linkedin_logo} width="25" heigh="25">[**Qing Shang**](www.linkedin.com/in/qing-shang-columbia)',
                     unsafe_allow_html=True)
 st.sidebar.header('Pricing Parameters')
 
