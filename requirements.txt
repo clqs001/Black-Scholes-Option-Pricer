@@ -1,0 +1,5 @@
+numpy
+scipy.stats
+streamlit
+numpy
+pandas
