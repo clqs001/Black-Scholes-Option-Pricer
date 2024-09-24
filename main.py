@@ -198,7 +198,10 @@ with tab1:
     
 
 with tab2:
-    st.write(f'### :material/monitoring: Implied Volatility: {imp_vol*100:.2f}%')
+    if imp_vol < 0:
+        st.error('Implied volatility cannot be negative. Please adjust the parameters.')
+    else:
+        st.write(f'### :material/monitoring: Implied Volatility: {imp_vol*100:.2f}%')
     st.markdown(':blue-background[The implied volatility is solved by Newton\'s method.]')
     df_iv_info = pd.DataFrame({'Option Type': [option_type], 'Market Price': [mkt_price], 'Spot Price': [S0], 
     'Strike Price': [K], 'Time to Maturity': [T], 'Risk-free Rate': [r]}, index = None)
