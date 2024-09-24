@@ -25,7 +25,7 @@ st.sidebar.markdown(f'<img src={linkedin_logo} width="25" heigh="25">[**Qing Sha
 st.sidebar.header('Pricing Parameters')
 
 # Input
-S0 = st.sidebar.number_input(label = "Underlying Asset Price", min_value = 0.00, max_value = None, value = 90.00, step = 0.01)
+S0 = st.sidebar.number_input(label = "Spot Price", min_value = 0.00, max_value = None, value = 90.00, step = 0.01)
 K = st.sidebar.number_input(label = "Strike Price", min_value = 0.00, max_value = None, value = 100.00, step = 0.01)
 T = st.sidebar.number_input(label = "Time to Maturity (in years)", min_value = 0.00, max_value = None, value = 2.00, step = 0.01)
 r = st.sidebar.number_input(label = "Risk-free Rate (%)", min_value = 0.00, max_value = None, value = 5.00, step = 0.01) / 100
